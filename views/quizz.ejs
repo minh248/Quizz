@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Multiple Choice</title>
+</head>
+
+<body>
+    <div class="navbar-header">
+        <div class="navbar-header--dropdown">
+
+            <nav class="navbar-nav bg-nav">
+                <ul>
+                    <h3>Quizz</h3>
+                    <a href="#"><i class="fas fa-home"></i></a>
+                    <li><a href="#">Section</a>
+                        <ul class="navbar-header--dropdown--hover">
+                            <li><a href="#">Homepage</a></li>
+                            <li><a href="#">Trivia Quizzes</a></li>
+                            <li><a href="#">Free Trivia Questions</a></li>
+                            <li><a href="#">Player Quiz Lists</a></li>
+                            <li><a href="#">Ask FunTrivia - Get Answers to Questions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Quizzes</a>
+                        <ul class="navbar-header--dropdown--hover">
+                            <li><a href="#">Animals</a></li>
+                            <li><a href="#">Brain Teasers</a></li>
+                            <li><a href="#">Celebrities</a></li>
+                            <li><a href="#">Entertainment</a></li>
+                            <li><a href="#">For Children</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a>
+                        <ul class="navbar-header--dropdown--hover">
+                            <li><a href="#">Gold Memberships: Gift Certificates</a></li>
+                            <li><a href="#">Get Daily Email Trivia</a></li>
+                            <li><a href="#">Create a Daily Trivia Tournament</a></li>
+                            <li><a href="#">Buy Trivia Questions/Host a Quiz Night</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+        <form action="/quizz/check" name="quizz" id="quizz" method="post">
+            <% for(i in data){ %>
+                <div class="quizz--multiplechoice">
+                    <p> <%= data[i].question %> </p>
+                    <% for(a of data[i].answer){ %>
+                        <p><input type="radio" name= "q<%= i %>" value= <%= a %>> <%= a %> </p>
+                    <% } %>
+                </div>
+            <% } %>
+
+<!--                test button and input-->
+<!--            <input type="button" name="" class="btn" value="submit">-->
+            <button class="btn"> Submit </button>
+        </form>
+</body>
+
+</html>

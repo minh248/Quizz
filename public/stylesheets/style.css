@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color:  #3CBCC3;
+}
+h3{
+    font-size: 4rem;
+    color: #1D1D2C;
+    float: left;
+    margin-top: 5px;
+    margin-left: -20px;
+    padding-right: 40px;
+}
+/* ----------------------------- */
+/* ----------REUSEABLE---------- */
+/* ----------------------------- */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ----------------------------- */
+/* --------NAV-BAR DROP--------- */
+/* ----------------------------- */
+.navbar-header{
+    font-size: 2.5rem;
+}
+.navbar-nav{
+    background-color: blueviolet;
+    width: 100%;
+    height: 60px;
+    margin-top: -10px;
+    padding: 0px 15px;
+}
+.navbar-nav i{
+    float: left;
+    font-size: 3rem;
+    margin-top: 15px;
+    color: white;
+}
+.navbar-nav ul{
+    float: left;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.navbar-nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+    margin-top: -7px;
+}
+.navbar-nav ul li a{
+    display: block;
+    padding: 20px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: #EBA63F;
+    margin-top: 2px;
+    margin-left: -10px;
+    border-radius: 0px 0px 5px 5px;
+}
+.navbar-nav ul li:hover ul{
+    display: block;
+}
+.navbar-nav ul li ul li{
+    width: 400px;
+}
+.navbar-nav ul li ul li a{
+    padding: 10px 20px;
+}
+.navbar-nav ul li ul li a:hover{
+    color: black;
+    background-color: #fff8dc;
+}
+
+/* ---------------------------------- */
+/* ------------SEARCH BOX------------ */
+/* ---------------------------------- */
+.search-form--box{
+    font-size: 3rem;
+    padding: 20px 50px;
+    background-color: rgba(29, 29, 44, .7);
+}
+/* -------------------------------------- */
+/* --------HIỂN THỊ CÁC TOPIC------------ */
+/* -------------------------------------- */
+.main-quizzes-topics h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.main-topics--quizzes--list{
+    background-color: aliceblue;
+}
+.animals-topics--quzzes h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+}
+.animals-topics--quizzes--list{
+    background-color: #fff8dc;
+}
+
+.brainteasers-topics--quizzes h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+}
+.brainteasers-topics--quizzes--list{
+    background-color: #fff8dc;
+}
+
+.celebrities-topics--quizzes h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+}
+.celebrities-topics--quizzes--list{
+    background-color: #fff8dc;
+}
+
+.entertainment-topics--quizzes h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.entertainment-topics--quizzes--list{
+    background-color: #fff8dc;
+}
+
+.forchildren-topics--quizzes h3{
+    background-color: #EBA63F;
+    margin: 30px 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+}
+.forchildren-topics--quizzes--list{
+    background-color: #fff8dc;
+}
+
+/* --------------------------------------- */
+/* --------CHIA GRID CÁC TOPIC------------ */
+/* --------------------------------------- */
+.container{
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5rem;
+    margin-top: -20px;
+}
+.container ul{
+    padding: 10px 50px;
+    width: 400px;
+}
+.container ul li{
+    display: block;
+    list-style: none;
+    padding: 5px 20px;
+    margin-left: -100px;
+}
+.container ul li a{
+    text-decoration: none;
+    color: #1D1D2C; 
+    margin-left: 20px;
+}
+
+.small-icons li{
+    display: inline-block;
+}
+.container ul li a:hover{
+    color: #E40C2B;
+}
+/* ------------------------------- */
+/* --------MULTIPLE CHOICE-------- */
+/* ------------------------------- */
+.quizz--multiplechoice {
+    font-size: 2rem;
+    margin: 20px 30px;
+    padding: 20px;
+    background-color: rgba(247, 244, 233, 0.7);
+    border-radius: 10px;
+}
+/* ------------------------------- */
+/* -----------SUBMIT BOX---------- */
+/* ------------------------------- */
+
+.quizz--multiplechoice input{
+    margin-right: 20px;
+}
+.quizz--multiplechoice p{
+    margin-left: 20px;
+}
+.btn{
+    font-size: 3rem;
+    margin-left: 30px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: rgba(228, 12, 43, .6);
+    color: white;
+}
