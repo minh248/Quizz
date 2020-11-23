@@ -6,8 +6,23 @@ const catergories = [
     "Animals",
     "Brain Teasers",
     "Celebrities",
-    "Entertainment"
+    "Entertainment",
+    "Literature",
+    "Movies",
+    "Music",
+    "People",
+    "General",
+    "Geography",
+    "History",
+    "Hobbies",
+    "Humanities",
+    "Sci/Tech",
+    "Sports",
+    "Television",
+    "Video Games",
+    "World"
 ]
+
 const catergories2 = {
     Animals: [
         "Cats",
