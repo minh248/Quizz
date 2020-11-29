@@ -9,7 +9,7 @@ router.get("/", async function (req, res) {
 
     var questions = []
     for(d of data){
-        // push answer randomly to answer array
+        // push the correct answer randomly to answer array
         var a = d.incorrect_answers
         a.splice(Math.floor(Math.random() * Math.floor(4)),0, d.correct_answer)
 
