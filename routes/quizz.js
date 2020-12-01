@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs').promises;
 
-var submitData = {minh: 1}
+var data = []
 
 router.get("/", function (req, res) {
     var categoryId = req.query.categoryId
@@ -10,11 +10,12 @@ router.get("/", function (req, res) {
 })
 
 router.post("/check", function(req, res) {
-    res.render("check.ejs", {submitData: submitData})
+    console.log(req.body)
+    res.render("check.ejs", {submitData: data})
 })
 
 router.get('/check', function(req, res) {
-    res.render("check.ejs", {submitData: submitData})
+    res.render("check.ejs", {submitData: data})
 });
 
 module.exports = router

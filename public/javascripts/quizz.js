@@ -3,17 +3,20 @@ function onLoading(categoryId) {
     alert(url)
 
     $.get(url, function (data, status) {
+        $('.topic-ques').append("<h3>" + 'Topic Questions: ' + 'api.category' + "</h3")
+        var i = 0
         for(d of data){
+            i ++
             $("#quizz").append(
-                "<div class='quizz--multiplechoice'>" +
-                "<p>" + d.question +"</p>" +
+                "<div class='question'>" +
+                "<b>" + d.question +"</b>" +
                 renderAnswer() +
                 "</div?")
 
             function renderAnswer() {
                 var r = ""
                 for(a of d.answers){
-                    r += "<p><input type='radio' name='animals2' value='" + a +"'>" + a + "</p>"
+                    r += "<p><input type='radio' name='q" + i + "' value='" + a +"'>" + a + "</p>"
                 }
                 return r
             }

@@ -3,8 +3,6 @@ var catergoryUrl = 'http://127.0.0.1:5000/api/v1/category'
 
 $(document).ready(function () {
     $.get(catergoryUrl, function (data, status) {
-        console.log(1)
-
         for (cgr of data) {
             $('#main-topics--quizzes--list').append("<div class ='topic-list'>" + "<ul>" +
                 "<li>" + "<a href ='/quizz?categoryId="+ cgr.categoryId.toString() +"'>" + cgr.category + "" +

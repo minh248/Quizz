@@ -1,6 +1,5 @@
 function onLoading(submitData) {
-    var submitData = submitData
-    alert("submitData: " + submitData)
+    console.log(submitData)
 
     $.get('https://5fc47e2136bc790016343947.mockapi.io/api/v1/checkans', function (data, status) {
         for (checks of data) {

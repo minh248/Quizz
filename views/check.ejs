@@ -15,7 +15,7 @@
 <body>
     <script src="../javascripts/check.js"></script>
     <script>
-        onLoading(<%= submitData%>)
+        onLoading(<%- JSON.stringify(submitData)%>)
     </script>
 
     <div class="navbar-header">
