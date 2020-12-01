@@ -34,7 +34,7 @@ router.get("/", async function (req, res) {
     }
 })
 
-router.post("/check", async function(req, res) {
+router.post("/check", function(req, res) {
     res.send(req.body)
 })
 

@@ -7,27 +7,22 @@
     <script src="https://kit.fontawesome.com/2bcc6914c0.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Quizz Team</title>
 </head>
 
 <body>
+    <script src="javascripts/category.js"></script>
 
-    <div class="log-in-out">
-        <nav class="log-in-out--nav">
-<!--            login test-->
-<!--            <li><a href="/">Sign in with google account</a></li>-->
-<!--            <li><a href="#">Log in</a></li>-->
-        </nav>
-    </div>
     <div class="navbar-header">
         <div class="navbar-header--dropdown">
             <nav class="navbar-nav bg-nav">
                 <ul>
-                    <h3>Quizz</h3>
+                    <a href="index.html">
+                        <h3>Quizz</h3>
+                    </a>
                     <a href="#"><i class="fas fa-home"></i></a>
                     <li><a href="#">Section</a>
                         <ul class="navbar-header--dropdown--hover">
@@ -60,32 +55,11 @@
             </nav>
         </div>
     </div>
-    <div class="clearfix"></div>
-    <div class="search-form">
-        <form>
-            <div class="search-form--box">
-                <input type="search" placeholder="Search">
-            </div>
-        </form>
-    </div>
     <div class="main-quizzes-topics">
         <h3>Main Quiz Topics</h3>
         <div class="clearfix"></div>
-        <nav class="main-topics--quizzes--list">
-            <div class="container">
-                <div class="row">
-                    <div class="col" class="main-topics--quizzes">
-                        <ul>
-                            <% for (t of titles){ %>
-                                <li><a href="/quizz"> <%= t %> </a></li>
-                            <% } %>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <div id="main-topics--quizzes--list"></div>
     </div>
-
 </body>
 
 </html>

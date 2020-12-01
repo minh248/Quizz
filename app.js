@@ -38,4 +38,7 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
+// google authentication
+// todo: auth
+
 module.exports = app;

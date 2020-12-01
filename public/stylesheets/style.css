@@ -11,11 +11,11 @@ body{
     background-color:  #3CBCC3;
 }
 h3{
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #1D1D2C;
     float: left;
     margin-top: 5px;
-    margin-left: -20px;
+    margin-left: 50px;
     padding-right: 40px;
 }
 /* ----------------------------- */
@@ -85,111 +85,131 @@ h3{
     color: black;
     background-color: #fff8dc;
 }
-
 /* ---------------------------------- */
-/* ------------SEARCH BOX------------ */
+/* ------------TOPIC QUIZ------------ */
 /* ---------------------------------- */
-.search-form--box{
-    font-size: 3rem;
-    padding: 20px 50px;
-    background-color: rgba(29, 29, 44, .7);
-}
-/* -------------------------------------- */
-/* --------HIỂN THỊ CÁC TOPIC------------ */
-/* -------------------------------------- */
-.main-quizzes-topics h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
-}
-.main-topics--quizzes--list{
+#main-topics--quizzes--list {
+    font-size: 2rem;
     background-color: aliceblue;
 }
-.animals-topics--quzzes h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
 
-}
-.animals-topics--quizzes--list{
-    background-color: #fff8dc;
-}
-
-.brainteasers-topics--quizzes h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
-
-}
-.brainteasers-topics--quizzes--list{
-    background-color: #fff8dc;
-}
-
-.celebrities-topics--quizzes h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
-
-}
-.celebrities-topics--quizzes--list{
-    background-color: #fff8dc;
-}
-
-.entertainment-topics--quizzes h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
-}
-.entertainment-topics--quizzes--list{
-    background-color: #fff8dc;
-}
-
-.forchildren-topics--quizzes h3{
-    background-color: #EBA63F;
-    margin: 30px 50px;
-    padding: 5px 20px;
-    border-radius: 10px;
-
-}
-.forchildren-topics--quizzes--list{
-    background-color: #fff8dc;
-}
-
-/* --------------------------------------- */
-/* --------CHIA GRID CÁC TOPIC------------ */
-/* --------------------------------------- */
-.container{
-    display: flex;
-    flex-flow: row;
-    font-size: 2.5rem;
-    margin-top: -20px;
-}
-.container ul{
-    padding: 10px 50px;
-    width: 400px;
-}
-.container ul li{
-    display: block;
-    list-style: none;
-    padding: 5px 20px;
-    margin-left: -100px;
-}
-.container ul li a{
+.topic-list ul li{
     text-decoration: none;
-    color: #1D1D2C; 
-    margin-left: 20px;
+    list-style: none;
+    padding: 15px 10px;
+}
+.topic-list ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left:50px;
+}
+.topic-list ul li a:hover{
+    color: red;
+}
+/* ---------------------------------- */
+/* ------------CATEGORY TOPIC------------ */
+/* ---------------------------------- */
+#animal-topics--quizzes--list {
+    font-size: 2rem;
+    background-color: aliceblue;
 }
 
-.small-icons li{
-    display: inline-block;
+.animal-topic--list ul li{
+    text-decoration: none;
+    list-style: none;
+    padding: 15px 10px;
 }
-.container ul li a:hover{
-    color: #E40C2B;
+.animal-topic--list ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left:50px;
+}
+.animal-topic--list ul li a:hover{
+    color: red;
+}
+
+/* ---------------------------------- */
+/* ------------LOGIN BOX------------ */
+/* ---------------------------------- */
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+}
+.login-box{
+    width: 300px;
+    padding: 30px;
+    transform: translate(200%, 20%);
+    text-align: center;
+}
+header{
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+}
+.login-box input[type="text"],.login-box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #1D1D2C;
+    padding: 12px;
+    width: 230px;
+    border-radius: 14px;
+    outline: none;
+    color: white;
+    transition: 0.50px;
+}
+.login-box input[type="text"]:focus,.login-box input[type="password"]:focus{
+    width: 250px;
+    border-color: #EBA63F;
+}
+.login-box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #EBA63F;
+    padding: 12px 30px;
+    border-radius: 14px;
+    outline: none;
+    color: #1D1D2C;
+    transition: 0.50px;
+    cursor: pointer;
+}
+.login-box input[type="submit"]:hover{
+    background-color: #EBA63F;
+}
+.link-gg {
+    color: red;
+    background-color: blue;
+    width: 250px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 14px;
+}
+.link-gg a{
+    color: white;
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* ------------------------------- */
+/* -----------CHECK---------- */
+/* ------------------------------- */
+.check-anw {
+    font-size: 2rem;
+    margin: 20px 30px;
+    padding: 20px;
+    background-color: rgba(247, 244, 233, 0.7);
+    border-radius: 10px;
+}
+.check-anw p{
+    margin-left: 20px;
 }
 /* ------------------------------- */
 /* --------MULTIPLE CHOICE-------- */
@@ -201,16 +221,16 @@ h3{
     background-color: rgba(247, 244, 233, 0.7);
     border-radius: 10px;
 }
-/* ------------------------------- */
-/* -----------SUBMIT BOX---------- */
-/* ------------------------------- */
-
 .quizz--multiplechoice input{
     margin-right: 20px;
 }
 .quizz--multiplechoice p{
     margin-left: 20px;
 }
+/* ------------------------------- */
+/* -----------SUBMIT BOX---------- */
+/* ------------------------------- */
+
 .btn{
     font-size: 3rem;
     margin-left: 30px;
