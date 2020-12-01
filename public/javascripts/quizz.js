@@ -16,11 +16,24 @@ function onLoading(categoryId) {
             function renderAnswer() {
                 var r = ""
                 for(a of d.answers){
-                    r += "<p><input type='radio' name='q" + i + "' value='" + a +"'>" + a + "</p>"
+                    r += "<p><input type='radio' name='q"+i+"' value='"+getJsonData(d, a)+"'>"+a+"</p>"
                 }
                 return r
+            }
+
+            function getJsonData(d, a) {
+                var data = {
+                    questionId : d.questionId,
+                    submittedAnswer: a
+                }
+                return JSON.stringify(data)
             }
         }
         $("#quizz").append("<button class='btn' value='Submit'> Submit </button>")
     })
+
+    var x = {
+        questionId: 123,
+        submittedAnswer: "asdj"
+    }
 }
