@@ -1,12 +1,15 @@
-function onLoading(submitData) {
-    console.log(submitData)
+var mockUrl = "https://5fc47e2136bc790016343947.mockapi.io/api/v1/checkans"
+var ApiUrl = "http://127.0.0.1:5000/api/v1/quizz/check"
 
-    $.get('https://5fc47e2136bc790016343947.mockapi.io/api/v1/checkans', function (data, status) {
-        for (checks of data) {
+function onLoading(submitData) {
+    console.log(typeof submitData)
+
+    $.post(ApiUrl, JSON.stringify(submitData), function (data, status) {
+        for (d of data) {
             $('.check-anw').append("<div class='answer'>" +
-                "<p>" + checks.question + "</p>" +
+                "<p>" + d.question + "</p>" +
                 "<br>" +
-                "<b>" + 'Correct Answer: ' + "<font color='green'>" + checks.correctAns + "</font>" + "</b>" +
+                "<b>" + 'Correct Answer: ' + "<font color='green'>" + d.correctAnswer + "</font>" + "</b>" +
                 "<br>" + "<br>" + "</div>")
         }
         if(data.length <= 10){

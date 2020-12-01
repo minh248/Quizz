@@ -10,16 +10,20 @@ router.get("/", function (req, res) {
 })
 
 router.post("/check", function(req, res) {
-    pushData(req.body.q1)
-    pushData(req.body.q2)
-    pushData(req.body.q3)
-    pushData(req.body.q4)
-    pushData(req.body.q5)
-    pushData(req.body.q6)
-    pushData(req.body.q7)
-    pushData(req.body.q8)
-    pushData(req.body.q9)
-    pushData(req.body.q10)
+    data = []
+    console.log(req.body.q1)
+    console.log(typeof req.body.q1)
+
+    pushData(JSON.parse(req.body.q1))
+    pushData(JSON.parse(req.body.q2))
+    pushData(JSON.parse(req.body.q3))
+    pushData(JSON.parse(req.body.q4))
+    pushData(JSON.parse(req.body.q5))
+    pushData(JSON.parse(req.body.q6))
+    pushData(JSON.parse(req.body.q7))
+    pushData(JSON.parse(req.body.q8))
+    pushData(JSON.parse(req.body.q9))
+    pushData(JSON.parse(req.body.q10))
     res.render("check.ejs", {submitData: data})
 })
 
@@ -30,6 +34,8 @@ router.get('/check', function(req, res) {
 function pushData(item){
     if(item !== null && item !== undefined){
         data.push(item)
+    } else{
+        data.push(JSON.stringify({QuestionId:0, submittedAnswer:"emty submit answer"}))
     }
 }
 

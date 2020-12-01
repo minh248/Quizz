@@ -1,9 +1,33 @@
 function onLoading(categoryId) {
     var url = "http://127.0.0.1:5000/api/v1/quizz?categoryId=" + categoryId
-    alert(url)
+    var topic = ["Animals",
+        "Art",
+        "Celebrities",
+        "Entertainment: Board Games",
+        "Entertainment: Books",
+        "Entertainment: Cartoon & Animations",
+        "Entertainment: Comics",
+        "Entertainment: Film",
+        "Entertainment: Japanese Anime & Manga",
+        "Entertainment: Music",
+        "Entertainment: Musicals & Theatres",
+        "Entertainment: Television",
+        "Entertainment: Video Games",
+        "General Knowledge",
+        "Geography",
+        "History",
+        "Mythology",
+        "Politics",
+        "Science & Nature",
+        "Science: Computers",
+        "Science: Gadgets",
+        "Science: Mathematics",
+        "Sports",
+        "Vehicles"
+    ]
 
     $.get(url, function (data, status) {
-        $('.topic-ques').append("<h3>" + 'Topic Questions: ' + 'api.category' + "</h3")
+        $('.topic-ques').append("<h3>" + "Topic Questions: " + topic[categoryId - 1] + "</h3")
         var i = 0
         for(d of data){
             i ++
@@ -31,9 +55,14 @@ function onLoading(categoryId) {
         }
         $("#quizz").append("<button class='btn' value='Submit'> Submit </button>")
     })
+}
 
-    var x = {
-        questionId: 123,
-        submittedAnswer: "asdj"
+function validateForm() {
+    for (var i = 1; i <= 10; i++) {
+        if ($("input[name=q" + i + "]:checked").val() === undefined) {
+            alert("Please select all answers")
+            return false
+        }
     }
+    return true
 }
