@@ -5,12 +5,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <title>Multiple Choice</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Check quizz</title>
 </head>
 
 <body>
-    <script src="javascripts/quizz.js"></script>
+    <script src="../javascripts/check.js"></script>
 
     <div class="navbar-header">
         <div class="navbar-header--dropdown">
@@ -51,9 +51,24 @@
         </div>
     </div>
     <div class="clearfix"></div>
+    <div class="check-anw">
+        <p>1. Stable feral cat colonies live in what kind of society?</p>
+        <br>
+        <b>Your answer: <font color="green">câu trả lời đúng</font></b>
+        <br><br>
+        <p>Phần khai sáng kiến thức</p>
+    </div>
+    <div class="check-anw">
+        <p>2. Where can feral cat colonies be found?</p>
+        <br>
+        <b>Your answer: <font color="red">câu trả lời sai</font></b>
+        <br><br>
+        <p>The correct answer: <font size="+1"><b>Câu trả lời đúng</b></font>
+        </p>
+        <br>
+        <p>Phần khai sáng kiến thức</p>
+    </div>
 
-    <form action="/quizz/check" name="quizz" id="quizz" method="post">
-        <button class="btn" onclick="submit()"> Submit </button>
-    </form>
 </body>
+
 </html>
