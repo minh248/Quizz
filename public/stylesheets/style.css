@@ -201,31 +201,64 @@ header{
 /* ------------------------------- */
 /* -----------CHECK---------- */
 /* ------------------------------- */
-.check-anw {
+.answer{
+    background-color: rgba(247, 244, 233, 0.7);
+    margin-top: 20px;
+    border-radius: 14px;
+    padding: 20px;
     font-size: 2rem;
     margin: 20px 30px;
     padding: 20px;
-    background-color: rgba(247, 244, 233, 0.7);
     border-radius: 10px;
 }
-.check-anw p{
+.answer p{
+    font-weight: 700;
     margin-left: 20px;
+}
+.answer b{
+    margin-left: 20px;
+}
+.sum-correct {
+    margin-left: 40px;
+    font-size: 2rem;
+    padding: 20px;
 }
 /* ------------------------------- */
 /* --------MULTIPLE CHOICE-------- */
 /* ------------------------------- */
-.quizz--multiplechoice {
-    font-size: 2rem;
-    margin: 20px 30px;
-    padding: 20px;
+.topic-ques {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 2px;
+    padding: 10px 20px;
+    border-radius: 14px;
+
+}
+.topic-ques h3{
+    background-color: #EBA63F;
+    padding: 5px 20px;
+    border-radius: 14px;
+}
+
+.question{
     background-color: rgba(247, 244, 233, 0.7);
+    margin-top: 20px;
+    border-radius: 14px;
+    padding: 20px;
+    font-size: 2rem;
+    margin: 50px 30px;
+    padding: 20px;
     border-radius: 10px;
 }
-.quizz--multiplechoice input{
-    margin-right: 20px;
-}
-.quizz--multiplechoice p{
+.question p{
     margin-left: 20px;
+}
+.question b{
+    margin-left: 20px;
+}
+.question input{
+    margin-right: 10px;
 }
 /* ------------------------------- */
 /* -----------SUBMIT BOX---------- */
@@ -234,6 +267,7 @@ header{
 .btn{
     font-size: 3rem;
     margin-left: 30px;
+    margin-bottom: 30px;
     padding: 5px 10px;
     border: none;
     border-radius: 10px;

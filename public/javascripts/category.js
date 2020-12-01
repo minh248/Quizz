@@ -7,7 +7,7 @@ $(document).ready(function () {
 
         for (cgr of data) {
             $('#main-topics--quizzes--list').append("<div class ='topic-list'>" + "<ul>" +
-                "<li>" + "<a href ='/quizz'" + cgr.categoryId +">" + cgr.category + "</a>" +
+                "<li>" + "<a href ='/quizz?categoryId="+ cgr.categoryId.toString() +"'>" + cgr.category + "" +
                 "</li>" +
                 "</ul>" +
                 "</div>")
